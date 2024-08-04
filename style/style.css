@@ -1,0 +1,135 @@
+a:hover{
+    color: green;
+    text-decoration: underline;
+}
+a:active{
+    color: blue;
+    text-decoration: line-through;
+}
+a:visited{
+    color: red;
+    text-decoration: overline;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+table, tr, td{
+    border: 2px solid red;
+    border-collapse: collapse;
+}
+
+table tr:first-child{
+    background-color: green;
+}
+
+table tr:last-child{
+    background-color: yellow;
+}
+
+table tr:nth-child(2n){
+    background-color: blue;
+}
+
+.box{
+    background-color: grey;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box .items{
+    background-color: red;
+}
+
+.grid{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    /* row-gap: 2px;
+    column-gap: 2px; */
+    gap: 2px;
+}
+.item{
+    background-color: red;
+}
+.itemg{
+    grid-column-start: 2;
+    grid-column-end:4;
+}
+
+@media screen and (max-width:400px) {
+    .grid{
+        background-color: grey;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:350px) {
+    .grid{
+        background-color: rgb(236, 15, 177);
+    }
+    
+}
+
+
+.animate{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(138, 138, 30);
+    line-height: 100px;
+    animation-name: anima;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+@keyframes anima{
+    0%{}
+    50%{
+        background-color: white;
+        color: black;
+        height: 100px;
+        line-height: 100px;
+        text-align: end;
+    }
+    100%{
+        background-color: red;
+        color: white;
+        height: 50px;
+        width: 10px;
+        font-size: 100px;
+        line-height: 50px;
+        text-align: end;
+    }
+}
+
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: red;
+
+    /* position: static;
+    left: 10px; */
+
+    /* position: relative;
+    left: 10px; */
+
+    position: absolute;
+    left: 10px;
+    z-index: -1;
+
+    /* position: fixed;
+    left: 10px;
+    bottom: 10px; */
+
+    /* position:sticky;
+    top: 0; */
+}
